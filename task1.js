@@ -71,6 +71,16 @@ if (a > 20) {
 }
 
 
+if (a >= 20) {
+    console.log("a is greater than or eaqual to 20");
+} else if (a <= 20) {
+    console.log("a is less than or equal to 20");
+} else {
+    console.log("a is equal to 20");
+}
+
+
+
 
 console.log("Number:",  a);
 console.log("data type:", typeof a);
