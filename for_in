@@ -1,0 +1,5 @@
+var fruits = ['apple','mango','banana','kiwi']
+   for(x in fruits){
+    console.log(x+":"+fruits[x])
+
+   }

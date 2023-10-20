@@ -1,0 +1,5 @@
+var fruits = ['apple','mango','banana','kiwi']
+   for(x of fruits){
+    console.log(x)
+
+   }
