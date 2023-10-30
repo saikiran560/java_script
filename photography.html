@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>web page</title>
+<style>
+nav{
+  
+  background: #1b1b1b;
+  width: 100%;
+  padding:5px;
+  
+}
+.head h2{
+  text-decoration: none;
+  margin-left:30px;
+  color: salmon;
+  font-size: 25px;
+  font-weight: 600;
+  
+}
+.menu h1{
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  }
+
+.sign{
+
+  padding-top:100px
+  position: center;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter:blur(10px);
+  margin-right:50px;
+  margin-top:100px;
+  
+ }
+ .logo{
+ border-top-left-radius:10px;
+ border-top-right-radius:10px;
+ }
+
+
+
+ /* Style for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+			backdrop-filter:blur(10px);
+            z-index: 1;
+        }
+        
+        /* Style for the popup registration form */
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+			
+            padding: 20px;
+            z-index: 2;
+        }
+        
+        /* Style for the close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+</style>
+</head>
+<body style="background-image:url('sup.jpg');background-size:cover;">
+<nav>
+<div class="menu">
+ <h1 style="color:grey;">kiran-photography</h1>
+ </nav>
+ <br>
+ </div>
+ <div style="display:flex">
+ 
+   <div > 
+    <img src="D:\Notepad++\log.jpg" class="logo" height="50" width="50">
+	</div>
+	
+	<div class="head">
+	<h2 >Kids And Wedding Photography<h2>
+	
+	
+	</div><br>
+	<div style="padding-right:300px;padding-left:0px;padding-top:100px;float:left;">
+	<marquee scrolldelay="100" align="justify">
+	<h3 style="color:red">25% off on pre-booking hurry up!<h3>
+	</marquee>
+	
+	</div>
+	
+ 
+ <div class="sign" style="padding-top:40px">
+  <span class="close-btn" onclick="closePopupForm()">&times;</span>
+<form>
+    <label for="username" style="color:LavenderBlush">Username:</label><br><br>
+    <input type="text" id="username" name="username" "><br><br>
+    <label for="pwd" style="color:LavenderBlush">Password:</label><br><br>
+    <input type="password" id="pwd" name="pwd" ><br><br>
+    <input type="submit" onclick="alert('Do u want to sign in?')" value="sign up" style="color:blue;background: lightblue;border-radius: 5px;">
+	<button type="button" onclick="alert('Do u want to login ?')" style="color:Crimson;background:lightblue;border-radius: 5px;">login</button><br><br>
+	
+    <button id="showPopupBtn" style="color:Crimson;background:lightblue;border-radius: 5px;">Register</button>
+	  	
+
+
+	</div>
+	   <div class="overlay" id="overlay"></div>
+
+    <!-- Popup registration form -->
+    <div class="popup-form" id="popupForm">
+        <span class="close-btn" onclick="closePopupForm()">&times;</span>
+        <h2>Registration Form</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        // Function to show the popup registration form
+        function showPopupForm() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("popupForm").style.display = "block";
+        }
+
+        // Function to close the popup registration form
+        function closePopupForm() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("popupForm").style.display = "none";
+        }
+
+        // Attach a click event listener to the "Register" button
+        document.getElementById("showPopupBtn").addEventListener("click", showPopupForm);
+    </script>
+ 
+ 
+ </body>
