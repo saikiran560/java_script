@@ -60,10 +60,18 @@ Generator functions allow you to pause and resume the execution of a function.
 They use the function* syntax and yield statements
 */
 function* generateNumbers() {
-    yield 1;
-    yield 2;
-    yield 3;
+
+    console.log("this is 1st yield");
+    yield 100;
+    console.log("this is 2nd yield");
+    yield 200;
+    
 }
+const gen =generateNumbers();
+console.log(gen.next());
+console.log(gen.next());
+
+
 
 /* constructor function*/
 function Person(firstName, lastName) {
