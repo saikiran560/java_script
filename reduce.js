@@ -1,7 +1,7 @@
 const numbers = [1, 2, 3, 4, 5, 6];
 
-function sum_reducer(accumulator, currentValue) {
-  return accumulator + currentValue;
+function sum_reducer(a, b) {
+  return a + b;
 }
 
 let sum = numbers.reduce(sum_reducer);

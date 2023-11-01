@@ -1,4 +1,4 @@
-function capitalizeFirstLetter(input) {
+function capital(input) {
     const words = input.split(' '); // Split the input into words
     const capitalizedWords = [];
 
@@ -14,6 +14,6 @@ function capitalizeFirstLetter(input) {
 }
 
 const userInput = prompt("Enter a sentence:");
-const capitalizedResult = capitalizeFirstLetter(userInput);
+const capitalizedResult = capital(userInput);
 
 console.log("Converted input: " + capitalizedResult);

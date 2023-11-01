@@ -1,5 +1,5 @@
 const words = ['sai', 'kiran', 'mohan', 'saikiran', 'mohansaikiran'];
 
-const result = words.filter(word => word.length > 3);
+const result = words.filter(namme => namme.length > 5);
 
 console.log(result);
