@@ -60,6 +60,96 @@ console.log(numbers.unshift(0));
 console.log(numbers);
 
 // Use an anonymous function to double each element
-number = numbers.map(function(item) {
-    console.log(item * 2);
+number = numbers.map(function(num) {
+    console.log(num * 2);
 });
+
+let square = function(num){
+    return num+num;
+}
+console.log(square(3))
+
+
+let person ={name:"sai",age:25};
+
+(function() {
+    console.log(person.name +" "+person.age);
+})(person);
+
+
+function factorial(n) {
+    if (n === 0) return 1;
+    return n * factorial(n - 1);
+}
+console.log(factorial(4));
+
+
+function* generateNumbers() {
+
+    console.log("this is 1st yield");
+    yield 1;
+    console.log("this is 2nd yield");
+    yield 2;
+    
+}
+const gen =generateNumbers();
+console.log(gen.next());
+console.log(gen.next());
+
+
+
+function man(first, last) {
+    this.first = first
+    this.last = last
+
+}
+
+// Create instances of Person using the constructor function
+const person1 = new man("sai","kiran")
+console.log(person1.first+" "+person1.last);
+
+
+/*Global scope*/
+let a = "hello";
+
+function greet() {
+    a = 3;
+}
+
+// before the function call
+console.log(a);
+
+//after the function call
+greet();
+console.log(a);
+
+
+/* Local scope */
+
+// program showing block-scoped concept
+// global variable
+let a = 'Hello';
+
+function greet() {
+
+    // local variable
+    let b = 'World';
+
+    console.log(a + ' ' + b);
+
+    if (b == 'World') {
+
+        // block-scoped variable
+        let c = 'hello';
+
+        console.log(a + ' ' + b + ' ' + c);
+    }
+
+    // variable c cannot be accessed here
+    console.log(a + ' ' + b +' 'c);
+}
+
+
+greet();
+
+

@@ -1,5 +1,17 @@
-var fruits = ['apple','mango','banana','kiwi']
+var fruits = ['apple','mango','banana','kiwi'];
    for(x of fruits){
-    console.log(x)
+    console.log(x);
 
    }
+
+   const arr=[1,2,3,4,5,6];
+   for(x of arr){
+      console.log(x);
+   }
+
+
+   const arr1= "hello"
+   for(x of arr1){
+      console.log(x);
+   }
+   

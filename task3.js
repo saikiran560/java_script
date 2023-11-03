@@ -105,7 +105,7 @@ function man(first, last) {
 }
 
 // Create instances of Person using the constructor function
-const person1 = new man("sai","kiran")
+const person1 = new man("sai","kiran");
 console.log(person1.first+" "+person1.last);
 
 

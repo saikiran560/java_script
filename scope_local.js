@@ -18,7 +18,7 @@ function greet() {
     }
 
     // variable c cannot be accessed here
-    console.log(a + ' ' + b );
+    console.log(a + ' ' + b);
 }
 
 
